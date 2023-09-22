@@ -26,6 +26,10 @@ const controlRecipe = async function () {
   } catch (err) {
     recipeView.renderError();
   }
+
+  //Test
+  //controlServings();
+
 };
 
 const controlSearchResults = async function () {
@@ -59,9 +63,9 @@ const controlPagination = function (goToPage) {
   paginationView.render(model.state.search);
 };
 
-const controlServings = function () {
+const controlServings = function (newServings) {
   // update the recipe servings (in state)
-  model.updateServings(8);
+  model.updateServings(newServings);
 
   // update the recipe view as well
   recipeView.render(model.state.recipe);
@@ -69,9 +73,9 @@ const controlServings = function () {
 
 const init = function () {
   recipeView.addHandleRender(controlRecipe);
+  recipeView.addHandlerUpdateServings(controlServings);
   searchView.addHandlerSearch(controlSearchResults); // publsiher effect
   paginationView.addHandlerClick(controlPagination); // paginationView.addHandlerClick object ma handler funtion pathako
-  controlServings();
 };
 
 init();
