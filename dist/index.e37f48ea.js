@@ -2922,8 +2922,12 @@ class View {
  * render the recieved object to DOM
  * @param {object | Object []} data the data to be render (e.g recipe)
  * @param {boolean} [render = tue] If false, create markup string insted of rendering to the DOM
- * @returns 
+ * @returns {undefined | string} A markup string is returned if render=false
+ * @this {object} View instance
+ * @author Sajal Timilsina
+ * @todo Finish the implementation
  */ render(data, render = true) {
+        console.log("Hacked");
         this._data = data;
         const markup = this._generateMarkup();
         if (!render) return markup;
