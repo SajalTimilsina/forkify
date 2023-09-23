@@ -2927,12 +2927,12 @@ class View {
  * @author Sajal Timilsina
  * @todo Finish the implementation
  */ render(data, render = true) {
-        console.log("Hacked");
         this._data = data;
         const markup = this._generateMarkup();
         if (!render) return markup;
         this._clear();
         this._parentElement.insertAdjacentHTML("afterbegin", markup);
+        console.log("new features");
     }
     update(data) {
         if (!data || Array.isArray(data) && data.length === 0) return this.renderError();

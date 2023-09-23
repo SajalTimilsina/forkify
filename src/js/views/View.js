@@ -14,12 +14,13 @@ export default class View {
  */
 
   render(data, render = true) {
-   console.log('Hacked');
     this._data = data;
     const markup = this._generateMarkup();
     if(!render) return markup;
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
+    console.log("new features");
+
   }
 
   update(data){
