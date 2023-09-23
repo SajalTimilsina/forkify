@@ -3,14 +3,49 @@ import icons from 'url:../../img/icons.svg'; // Parcel 2
 export default class View {
   _data;
 
-  render(data) {
-    if (!data || (Array.isArray(data) && data.length === 0))
-      return this.renderError();
-
+/**
+ * render the recieved object to DOM
+ * @param {object | Object []} data the data to be render (e.g recipe)
+ * @param {boolean} [render = tue] If false, create markup string insted of rendering to the DOM
+ * @returns 
+ */
+  render(data, render = true) {
+   
     this._data = data;
     const markup = this._generateMarkup();
+    if(!render) return markup;
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
+  }
+
+  update(data){
+    if (!data || (Array.isArray(data) && data.length === 0))
+      return this.renderError();
+    console.log("Update is Called");
+    this._data = data;
+    const newMarkup = this._generateMarkup();
+    const newDOM = document.createRange().createContextualFragment(newMarkup);// virtual memory DOM
+    const newElements = newDOM.querySelectorAll('*');
+    //console.log(newElements);
+    const curElements = this._parentElement.querySelectorAll("*");
+    //console.log(curElements);
+
+    newElements.forEach((newEl, i) =>{
+      const curEl = curElements[i];
+      //console.log(curEl, newEl.isEqualNode(curEl));
+
+      // Update Changed TEXt
+      if(!newEl.isEqualNode(curEl) && newEl.firstChild?.nodeValue.trim() !== ''){ // chaining to check firstnode exist
+        curEl.textContent = newEl.textContent;
+      }
+
+      // Updates Chnaged Attributes
+      if(!newEl.isEqualNode(curEl))
+      {
+        Array.from(newEl.attributes).forEach(attr => 
+          curEl.setAttribute(attr.name, attr.value));
+      }
+    });
   }
 
   _clear() {
