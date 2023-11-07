@@ -1,4 +1,4 @@
-#Forkify - Recipe App
+## Forkify - Recipe App
 Forkify is a recipe application built with pure JavaScript. It allows users to search for recipes, view recipe details, add recipes to their bookmarks, and store them in local storage.
 
 ## Features
@@ -12,25 +12,25 @@ Forkify is a recipe application built with pure JavaScript. It allows users to s
 
 - **Add New Recipes**: Contribute to our growing collection by adding your own recipes.
 
-Forkify Architecture: Main
+## Forkify Architecture: Main
 
 ![forkify-architecture-recipe-loading](https://github.com/SajalTimilsina/forkify/assets/19229631/cde751cc-58b3-41f4-97f9-80f9acdeb141)
 
-Part 1: FlowChart ( User search, Paginatin & Async recipe Loading)
+# Part 1: FlowChart ( User search, Paginatin & Async recipe Loading)
 - Implement search functionality.
 - Load recipes asynchronously from an external API.
 - Provide pagination for a better user experience.
   
 ![forkify-flowchart-part-1](https://github.com/SajalTimilsina/forkify/assets/19229631/aaad822d-32be-49d3-973f-42100939c93d)
 
-Part2: FlowChart ( Recipe Bookmark, Load/store Bookmark in local storage, Update UI)
+# Part 2: FlowChart ( Recipe Bookmark, Load/store Bookmark in local storage, Update UI)
 - Bookmark recipes and store them in local storage.
 - Keep your bookmarks organized and readily accessible.
 - Update the UI to reflect your bookmarked recipes.
   
 ![forkify-flowchart-part-2](https://github.com/SajalTimilsina/forkify/assets/19229631/ea134e60-8992-48b0-b5f2-060fbc3bda5f)
 
-Part3: FlowChart ( Add New recipe, Update Bookmark/Local storage, Update UI)
+# Part 3: FlowChart ( Add New recipe, Update Bookmark/Local storage, Update UI)
 - Contribute your own recipes to the collection.
 - Keep local storage up to date with the new additions.
 - Enjoy a seamless user interface that showcases your recipe contributions.
@@ -50,7 +50,7 @@ Please note that the code provided in this README is a simplified representation
 
 ## Conclusion
 
-Forkify is a versatile recipe application that simplifies recipe discovery and management. The provided README offers a high-level overview of the project. For a more detailed understanding and access to the complete codebase, please visit the project repository.
+Forkify is a versatile recipe application that simplifies recipe discovery and management. The provided README offers a high-level overview of the project. For a more detailed understanding and access to the complete codebase, please visit the project repository. @Sajal Timilsina - JavaScript Developer
 
 Happy cooking! 🍳
 
