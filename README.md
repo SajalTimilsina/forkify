@@ -1,6 +1,10 @@
 ## Forkify - Recipe App
 Forkify is a recipe application built with pure JavaScript. It allows users to search for recipes, view recipe details, add recipes to their bookmarks, and store them in local storage.
 
+- Hosted on Netlify: (https://forkify13.netlify.app/)
+![image](https://github.com/SajalTimilsina/forkify/assets/19229631/df0016e4-e6e1-49c0-bfb8-669d83e27bb2)
+
+
 ## Features
 - **User-Friendly Search**: Easily search for your favorite recipes.
 
